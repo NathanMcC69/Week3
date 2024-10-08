@@ -1,9 +1,19 @@
 ﻿class Book
 {
+    //Properties
     string Title;
     string Author;
     string ISBN;
     int NoOfPages;
+
+   //Constructor for book object
+   public Book(string bookTitle, string BookAuthor, string bookISBN, int bookNoOfPages)
+    {
+        Title = bookTitle;
+        Author = BookAuthor;
+        ISBN = bookISBN;
+        NoOfPages = bookNoOfPages;
+    }
 
     void DisplayInfo()
     {
@@ -17,24 +27,12 @@
         Console.WriteLine();
     }
 
-    
-
     static void Main(string[] args)
     {
         //Create a new instance of the book class
-        Book book = new Book();
-        book.Title = "c# for beginers";
-        book.Author = "Bill Gates";
-        book.ISBN = "12345";
-        book.NoOfPages = (200);
-
-
-        Book book2 = new Book();
-        book2.Title = "C# methods and classes";
-        book2.Author = "Microsoft";
-        book2.ISBN = "12345678910";
-        book2.NoOfPages = (50);
-
+       Book book = new Book("C# for beginers", "Bill Gates", "12345", 200);
+        //another instance
+        Book book2 = new Book("Visual studio 2022", "Microsoft", "123", 70);
         // Output book infotrmation to the Console
        book.DisplayInfo();
         book2.DisplayInfo();
